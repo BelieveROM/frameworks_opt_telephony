@@ -898,8 +898,7 @@ final class GsmServiceStateTracker extends ServiceStateTracker {
 
         if (hasRilDataRadioTechnologyChanged) {
             mPhone.setSystemProperty(TelephonyProperties.PROPERTY_DATA_NETWORK_TYPE,
-                    ServiceState.rilRadioTechnologyToString(mSS.getRilVoiceRadioTechnology()));
-            mDataRatChangedRegistrants.notifyRegistrants();
+                    ServiceState.rilRadioTechnologyToString(mSS.getRilDataRadioTechnology()));
         }
 
         if (hasRegistered) {
